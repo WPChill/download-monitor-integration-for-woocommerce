@@ -2,7 +2,7 @@
 Contributors: wpchill
 Tags: download, shop, purchase, files, protection
 Requires at least: 5.5
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 1.0.0
 License: GPLv3
 Requires PHP: 7.3
