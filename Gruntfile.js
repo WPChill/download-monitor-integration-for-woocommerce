@@ -129,7 +129,8 @@ module.exports = function (grunt) {
 						'!tests/**',
 						'!codeception.dist.yml',
 						'!regconfig.json',
-						'!nbproject/**'
+						'!nbproject/**',
+						'!tailwind.config.js',
 					],
 					dest  : 'build/'
 				}
