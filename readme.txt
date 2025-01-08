@@ -1,5 +1,5 @@
 === Download Monitor integration for WooCommerce ===
-Contributors: wpchill
+Contributors: wpchill, cristian.raiber
 Tags: download, shop, purchase, files, protection
 Requires at least: 5.5
 Tested up to: 6.7

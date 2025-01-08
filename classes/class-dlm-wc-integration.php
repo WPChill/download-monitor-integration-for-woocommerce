@@ -66,7 +66,7 @@ class DLMWC_Integration {
 		?>
 		<div class="options-group dlm-woocommerce-locked-downloads">
 			<p class="form-field">
-				<label for="<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>"><?php esc_html_e( 'Downloads', 'download-monitor-for-woocommerce' ); ?></label>
+				<label for="<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>"><?php esc_html_e( 'Downloads', 'download-monitor-integration-for-woocommerce' ); ?></label>
 				<select class='wc-enhanced-select' name='<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>[]' multiple='multiple'>
 					<?php
 					// Cycle through each download and output the option.
@@ -141,7 +141,7 @@ class DLMWC_Integration {
 	public function show_download_monitor_content() {
 		$user_id = get_current_user_id();
 		if ( ! $user_id ) {
-			echo esc_html__( 'You must be logged in to view downloads.', 'download-monitor-for-woocommerce' );
+			echo esc_html__( 'You must be logged in to view downloads.', 'download-monitor-integration-for-woocommerce' );
 
 			return;
 		}
@@ -170,10 +170,10 @@ class DLMWC_Integration {
 			}
 		}
 
-		echo '<h2>' . esc_html__( 'Download Monitor Downloads', 'download-monitor-for-woocommerce' ) . '</h2>';
+		echo '<h2>' . esc_html__( 'Download Monitor Downloads', 'download-monitor-integration-for-woocommerce' ) . '</h2>';
 
 		if ( empty( $download_ids ) ) {
-			echo esc_html__( 'No downloads available.', 'download-monitor-for-woocommerce' );
+			echo esc_html__( 'No downloads available.', 'download-monitor-integration-for-woocommerce' );
 
 			return;
 		}

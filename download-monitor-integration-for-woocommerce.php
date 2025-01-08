@@ -7,7 +7,7 @@
 	Author: WPChill
 	Author URI: https://wpchill.com
 	Requires PHP: 7.3
-	Text Domain: download-monitor-for-woocommerce
+	Text Domain: download-monitor-integration-for-woocommerce
 	Domain Path: /languages
 	Requires Plugins: woocommerce, download-monitor
 	License: GPL v3
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @return void
  */
-function dlm_woocommerce_integration() {
+function dlmwc_integration() {
 	// Define.
 	define( 'DLMWC_FILE', __FILE__ );
 	define( 'DLMWC_PATH', plugin_dir_path( __FILE__ ) );
@@ -40,14 +40,14 @@ function dlm_woocommerce_integration() {
 	define( 'DLMWC_VERSION', '1.0.0' );
 
 	if ( ! class_exists( 'WP_DLM' ) ) { // Check if DLM is active.
-		add_action( 'admin_notices', 'dlm_woocommerce_dlm_needs', 15 );
+		add_action( 'admin_notices', 'dlmwc_dlm_needs', 15 );
 
 		return;
 	}
 
 	// Check if WooCommerce is active.
 	if ( ! class_exists( 'WooCommerce' ) ) {
-		add_action( 'admin_notices', 'dlm_woocommerce_woocommerce_needs', 15 );
+		add_action( 'admin_notices', 'dlmwc_woocommerce_needs', 15 );
 
 		return;
 	}
@@ -63,7 +63,7 @@ function dlm_woocommerce_integration() {
 }
 
 // init extension.
-add_action( 'plugins_loaded', 'dlm_woocommerce_integration', 120 );
+add_action( 'plugins_loaded', 'dlmwc_integration', 120 );
 
 /**
  * Download Monitor needed notice.
@@ -71,12 +71,12 @@ add_action( 'plugins_loaded', 'dlm_woocommerce_integration', 120 );
  * @return void
  * @since 1.0.0
  */
-function dlm_woocommerce_dlm_needs() {
+function dlmwc_dlm_needs() {
 	?>
 	<div class="notice notice-error is-dismissible">
 		<p>
 		<?php
-			esc_html_e( 'Download Monitor - WooCommerce integration requires Download Monitor plugin to be installed and activated.', 'download-monitor-for-woocommerce' );
+			esc_html_e( 'Download Monitor - WooCommerce integration requires Download Monitor plugin to be installed and activated.', 'download-monitor-integration-for-woocommerce' );
 		?>
 		</p>
 	</div>
@@ -89,12 +89,12 @@ function dlm_woocommerce_dlm_needs() {
  * @return void
  * @since 1.0.0
  */
-function dlm_woocommerce_woocommerce_needs() {
+function dlmwc_woocommerce_needs() {
 	?>
 	<div class="notice notice-error is-dismissible">
 		<p>
 		<?php
-			esc_html_e( 'Download Monitor - WooCommerce integration requires WooCommerce plugin to be installed and activated.', 'download-monitor-for-woocommerce' );
+			esc_html_e( 'Download Monitor - WooCommerce integration requires WooCommerce plugin to be installed and activated.', 'download-monitor-integration-for-woocommerce' );
 		?>
 		</p>
 	</div>
