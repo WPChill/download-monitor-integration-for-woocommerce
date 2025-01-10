@@ -22,7 +22,6 @@ dirsToCopy.forEach((dir) => {
   });
 });
 
-// Copy files
 filesToCopy.forEach((file) => {
   fs.copySync(path.join(srcDir, file), path.join(buildDir, file));
 });
