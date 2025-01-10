@@ -16,7 +16,6 @@ jobs:
             - name: Build Stage
               run: |
                   npm install
-                  npm run production
                   npm run plugin-zip
 
             - name: Get version from package.json
