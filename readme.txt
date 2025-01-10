@@ -41,9 +41,10 @@ Yes, when configuring your WooCommerce product, you can link one or multiple dow
 
 1. Download Monitor - download configuration
 2. WooCommerce - product configuration
-3. Trying to download a restricted file
-4. Making the purchase
-5. Download the file after purchase
+3. Listing a product in the front-end
+4. Prompting the purchase
+5. Checkout form
+6. Download after completing payment
 
 == Changelog ==
 
