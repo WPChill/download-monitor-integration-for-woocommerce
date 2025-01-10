@@ -48,5 +48,5 @@ Yes, when configuring your WooCommerce product, you can link one or multiple dow
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.0 - 10.01.2025 =
 Initial Release
