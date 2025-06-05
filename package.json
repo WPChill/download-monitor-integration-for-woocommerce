@@ -1,7 +1,7 @@
 {
 	"name": "download-monitor-integration-for-woocommerce",
 	"main": "Gruntfile.js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "WPCHILL",
 	"license": "GPL v3",
 	"repository": "https://github.com/WPChill/download-monitor-integration-for-woocommerce.git",

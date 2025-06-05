@@ -3,7 +3,7 @@
 	Plugin Name: Download Monitor integration for WooCommerce
 	Plugin URI: https://download-monitor.com/kb/woocommerce-and-download-monitor-integration/
 	Description: With the help of this extension you will be able to restrict the downloads from your website behind a WooCommerce purchase.
-	Version: 1.0.0
+	Version: 1.0.1
 	Author: WPChill
 	Author URI: https://wpchill.com
 	Requires PHP: 7.3
@@ -37,7 +37,7 @@ function dlmwc_integration() {
 	define( 'DLMWC_FILE', __FILE__ );
 	define( 'DLMWC_PATH', plugin_dir_path( __FILE__ ) );
 	define( 'DLMWC_URL', plugin_dir_url( __FILE__ ) );
-	define( 'DLMWC_VERSION', '1.0.0' );
+	define( 'DLMWC_VERSION', '1.0.1' );
 
 	if ( ! class_exists( 'WP_DLM' ) ) { // Check if DLM is active.
 		add_action( 'admin_notices', 'dlmwc_dlm_needs', 15 );

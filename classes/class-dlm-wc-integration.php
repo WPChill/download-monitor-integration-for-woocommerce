@@ -63,15 +63,23 @@ class DLMWC_Integration {
 	 */
 	public function add_download_monitor_field() {
 		$downloads = $this->get_download_monitor_options();
+		$selected_downloads = get_post_meta( get_the_ID(), DLMWC_Constants::META_WC_PROD_KEY, true );
+
+		if( ! is_array( $selected_downloads ) || empty( $selected_downloads ) ){
+			$selected_downloads = array();
+		} else {
+			$selected_downloads = array_map( 'absint', $selected_downloads );
+		}
+
 		?>
 		<div class="options-group dlm-woocommerce-locked-downloads">
 			<p class="form-field">
 				<label for="<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>"><?php esc_html_e( 'Downloads', 'download-monitor-integration-for-woocommerce' ); ?></label>
-				<select class='wc-enhanced-select' name='<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>[]' multiple='multiple'>
+				<select class='wc-enhanced-select' name='<?php echo esc_attr( DLMWC_Constants::META_WC_PROD_KEY ); ?>[]' multiple='multiple'> 
 					<?php
 					// Cycle through each download and output the option.
 					foreach ( $downloads as $id => $title ) {
-						$selected = in_array( (string) $id, (array) get_post_meta( get_the_ID(), DLMWC_Constants::META_WC_PROD_KEY, true ), true );
+						$selected = in_array( absint( $id ), $selected_downloads, true );
 						echo '<option value="' . esc_attr( $id ) . '" ' . ( $selected ? ' selected="selected" ' : '' ) . '>' . esc_html( $title ) . '</option>';
 					}
 					?>
