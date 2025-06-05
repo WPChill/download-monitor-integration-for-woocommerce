@@ -3,7 +3,7 @@ Contributors: wpchill, cristian.raiber
 Tags: download, shop, purchase, files, protection
 Requires at least: 5.5
 Tested up to: 6.8
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 Requires PHP: 7.3
 
@@ -48,5 +48,8 @@ Yes, when configuring your WooCommerce product, you can link one or multiple dow
 
 == Changelog ==
 
-= 1.0.0 - 10.01.2025 =
+= 1.0.1 - 05.06.2025 =
+Fixed: Selected downloads not showing up in WooCommerce product edit screen.
+
+= 1.0.1 - 10.01.2025 =
 Initial Release
